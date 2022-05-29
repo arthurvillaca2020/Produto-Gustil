@@ -24,6 +24,11 @@ public class ProdutoController {
 
         return ResponseEntity.status(201).build();
     }
-
+    
+    @GetMapping("/listarTodos")
+    public ResponseEntity <List<Produto>> listarTodos()
+    {
+        return ResponseEntity.ok(produtoService.listarTodos());
+    }
 
 }
