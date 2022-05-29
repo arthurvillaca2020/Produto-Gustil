@@ -20,6 +20,10 @@ public class ProdutoService {
     public Produto cadastrarProduto(Produto produto){
         return produtoDAO.save(produto);
     }
-
+    
+    public List<Produto> listarTodos()
+    {
+        return produtoDAO.findAll();
+    }
 
 }
