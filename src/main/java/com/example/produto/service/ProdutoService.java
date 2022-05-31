@@ -25,5 +25,10 @@ public class ProdutoService {
     {
         return produtoDAO.findAll();
     }
+    
+    public List<Produto> acharProduto(String nome)
+    {
+        return produtoDAO.findByNome(nome);
+    }
 
 }
