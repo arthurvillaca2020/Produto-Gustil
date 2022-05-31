@@ -30,5 +30,12 @@ public class ProdutoController {
     {
         return ResponseEntity.ok(produtoService.listarTodos());
     }
+    
+    @GetMapping("/AcharProduto")
+    public ResponseEntity <Produto> acharProduto(@RequestBody Produto produto)
+    {
+        produtoService.acharProduto(produto.getNome());
+        return ResponseEntity.status(201).build();
+    }
 
 }
